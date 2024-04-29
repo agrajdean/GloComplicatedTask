@@ -1,11 +1,32 @@
-let num = 266219,
-  sum,
-  degree;
+let lang = "ru";
 
-sum = 2 * 6 * 6 * 2 * 1 * 9;
-console.log(sum);
+if (lang == "ru") {
+  console.log("пн", "вт", "ср", "чт", "пт", "сб", "вс");
+} else if (lang == "en") {
+  console.log("mn", "ts", "wd", "th", "fr", "st", "sn");
+}
 
-degree = sum ** 3;
-console.log(degree);
+let language = "en";
 
-console.log(String(degree).slice(0, 2));
+switch (language) {
+  case "ru":
+    console.log("пн", "вт", "ср", "чт", "пт", "сб", "вс");
+    break;
+  case "en":
+    console.log("mn", "ts", "wd", "th", "fr", "st", "sn");
+    break;
+}
+
+let Arr = [];
+Arr.ru = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+Arr.en = ["mn", "ts", "wd", "th", "fr", "st", "sn"];
+console.log(Arr[lang]);
+
+let namePerson = "Александр";
+console.log(
+  namePerson == "Артем"
+    ? "Директор"
+    : namePerson === "Александр"
+    ? "Преподователь"
+    : "Студент"
+);
